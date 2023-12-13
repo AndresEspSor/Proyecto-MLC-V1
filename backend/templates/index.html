@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code</title>
+</head>
+<body>
+    {% if qr %}
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <h1 style="text-align: center;">QR Code</h1>
+            <img 
+            src="{{ url_for('static', filename='qrcode.png') }}" 
+            alt="QR
+            Code" 
+            width="300" 
+            height="300" 
+            />
+        </div>
+    {% else %}
+        <p>No QR Code</p>
+    {% endif %}
+</body>
+</html>

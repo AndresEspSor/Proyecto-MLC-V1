@@ -1,0 +1,13 @@
+version: '2'
+services:
+  pepr-bot-js:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    network_mode: "host"
